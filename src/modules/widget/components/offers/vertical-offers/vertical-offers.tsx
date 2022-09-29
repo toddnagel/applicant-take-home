@@ -2,6 +2,11 @@ import React from 'react';
 import Classnames from 'classnames';
 import { PrizeoutOffer, PrizeoutOfferSettings } from '../../../../../slices/offers-slice';
 import { OfferGiftCard } from '../offer-gift-card/offer-gift-card';
+import { useAppSelector } from '../../../../../hooks';
+import { selectIsCheckoutPanelCollapsed } from '../../../../../slices/common-slice';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../../../../../store';
+import { toggleIsCollapsedCheckoutPanelOpen } from '../../../../../slices/checkout-slice';
 
 import './vertical-offers.less';
 
@@ -11,11 +16,17 @@ interface OfferView {
 }
 
 const VerticalOffers: React.FC<OfferView> = ({ offers, viewSettings }): React.ReactElement => {
-    const heading = viewSettings.title || 'Recommended';
+    const isCheckoutPanelCollapsedView = useAppSelector(selectIsCheckoutPanelCollapsed);
+    const heading = viewSettings.title || 'Recommended for you';
     const subtitle = viewSettings.subtitle || null;
     const classes: string = Classnames('vertical-offers', { '--has-subtitle': subtitle });
+    const dispatch = useDispatch<AppDispatch>();
 
-    const offerClickHandler = (offer: PrizeoutOffer) => {};
+    const offerClickHandler = (offer: PrizeoutOffer) => {
+        if (isCheckoutPanelCollapsedView) {
+            dispatch(toggleIsCollapsedCheckoutPanelOpen());
+        }
+    };
 
     const returnOffers = () => {
         return offers.map((offer) => (
