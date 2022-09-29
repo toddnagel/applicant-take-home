@@ -13,7 +13,7 @@ const CheckoutButton: React.FC = (): React.ReactElement => {
         <>
             <Button
                 ariaLabel="Prizeout your gift card"
-                color={`confirm`}
+                color={`primary`}
                 onClick={buttonHandler}
                 size="medium"
                 text={buttonText}

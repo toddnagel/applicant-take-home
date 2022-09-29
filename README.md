@@ -1,6 +1,6 @@
 # Prizeout Applicant Take Home Test
 
-## Initialization
+## Instructions
 The take home test is geared to test ones ability in a React application. The application is built using typescript, react, redux toolkit, html and less. Starting the application will render a list of gift card offers available to a given user. Please complete the following tasks:
 
 When clicking on a gift card offer in the grid, please set a blue border around the offer card so the user knows which one is selected.
@@ -10,6 +10,14 @@ When clicking on an offer, please populate the right sidebar with the selected o
 A user should be able to select a value for the gift card they would like to purchase.
 
 Clicking the Prizeout button should trigger an api call to the server. You can mock a successful response from the server. The request should include all viable information inregards to the offer that has been selected and the gift card value that was chosen. The following values are required by the checkout endpoint: `checkout_value_id`, `cost_in_cents`, `name`, `value_in_cents`. 
+
+**Frontend focused candidates should also do the following styling task:**
+
+Style the list of available cost options for the gift card according to the attached design
+
+![Prizeout calculation](https://assets.prizeout.com/temp/code-challenge/calculation.png)
+
+
 
 ## Offer Schema Example
 
