@@ -1,12 +1,10 @@
 import React from 'react';
 import { Button } from '../../common';
 
-import './checkout-button.less';
-
 const CheckoutButton: React.FC = (): React.ReactElement => {
     const buttonText = 'Prizeout Gift Card';
     const buttonHandler = () => {
-        // Add checkout logic here
+        // Checkout logic here
     };
 
     return (

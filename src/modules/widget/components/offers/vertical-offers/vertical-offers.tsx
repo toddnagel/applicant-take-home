@@ -18,14 +18,16 @@ interface OfferView {
 const VerticalOffers: React.FC<OfferView> = ({ offers, viewSettings }): React.ReactElement => {
     const isCheckoutPanelCollapsedView = useAppSelector(selectIsCheckoutPanelCollapsed);
     const heading = viewSettings.title || 'Recommended for you';
-    const subtitle = viewSettings.subtitle || null;
-    const classes: string = Classnames('vertical-offers', { '--has-subtitle': subtitle });
+    const classes: string = Classnames('vertical-offers');
     const dispatch = useDispatch<AppDispatch>();
 
     const offerClickHandler = (offer: PrizeoutOffer) => {
         if (isCheckoutPanelCollapsedView) {
             dispatch(toggleIsCollapsedCheckoutPanelOpen());
         }
+        
+        // Select offer
+        
     };
 
     const returnOffers = () => {
@@ -41,7 +43,6 @@ const VerticalOffers: React.FC<OfferView> = ({ offers, viewSettings }): React.Re
     return (
         <div className={classes}>
             <h2>{heading}</h2>
-            {subtitle && <h3>{subtitle}</h3>}
             {offers && <div className="vertical-offers__gift-cards">{returnOffers()}</div>}
         </div>
     );

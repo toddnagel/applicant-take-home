@@ -19,9 +19,21 @@ export const OfferGiftCard: React.FC<OfferGiftCardProps> = ({ offer, onClickHand
     const classes: string = Classnames('offer-gift-card', {
         'selected-offer-gift-card': activeOfferId === firstGiftCard.checkout_value_id,
     });
+    
+    const selectOfferOnEnter = (event: React.KeyboardEvent<HTMLElement>) => {
+        if (event.key === 'Enter') {
+            onClickHandler();
+        }
+    };
 
     return (
-        <div className={classes} onClick={() => onClickHandler()}>
+        <div
+            className={classes}
+            onClick={() => onClickHandler()}
+            onKeyDown={(event) => selectOfferOnEnter(event)}
+            role="button"
+            tabIndex={0}
+        >
             <GiftCard name={offer.name} imgUrl={offer.image_url} altText={offer.name} className="offer" />
             {offerValue > 0 && <BonusTag type={offerType} value={offerValue} size="small" />}
         </div>
