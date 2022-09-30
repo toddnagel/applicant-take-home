@@ -19,7 +19,7 @@ export const OfferGiftCard: React.FC<OfferGiftCardProps> = ({ offer, onClickHand
     const classes: string = Classnames('offer-gift-card', {
         'selected-offer-gift-card': activeOfferId === firstGiftCard.checkout_value_id,
     });
-    
+
     const selectOfferOnEnter = (event: React.KeyboardEvent<HTMLElement>) => {
         if (event.key === 'Enter') {
             onClickHandler();
