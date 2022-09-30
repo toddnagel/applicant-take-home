@@ -21,15 +21,10 @@ export const App: React.FC = (): React.ReactElement => {
     const isMobilePortraitView = useAppSelector(selectIsMobilePortrait);
 
     const windowResize = () => {
-        console.log('resizing?');
         windowResizeHandler(dispatch, isCheckoutPanelCollapsedView, isMobilePortraitView);
     };
 
     window.addEventListener('resize', windowResize);
-
-    window.addEventListener('touchmove', (e) => {
-        e.preventDefault();
-    });
 
     useLayoutEffect(() => {
         const isCheckoutPanelCollapsed = window.innerWidth < 880;

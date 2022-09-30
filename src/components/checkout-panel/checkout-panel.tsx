@@ -7,10 +7,10 @@ import { selectIsCheckoutPanelCollapsed } from '../../slices/common-slice';
 import useTransition from 'react-transition-state';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../store';
-
-import './checkout-panel.less';
 import { selectIsCollapsedCheckoutPanelOpen, toggleIsCollapsedCheckoutPanelOpen } from '../../slices/checkout-slice';
 import { Overlay } from '../common';
+
+import './checkout-panel.less';
 
 export const CheckoutPanel: React.FC = (): React.ReactElement => {
     const isCollapsedCheckoutPanelOpen = useAppSelector(selectIsCollapsedCheckoutPanelOpen);
