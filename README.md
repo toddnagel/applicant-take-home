@@ -1,7 +1,11 @@
 # Prizeout Applicant Take Home Test
 
 ## Instructions
-The take home test is geared to test ones ability in a React application. The application is built using typescript, react, redux toolkit, html and less. Starting the application will render a list of gift card offers available to a given user. Please complete the following tasks:
+This take-home challenge is geared toward testing one's ability to code in a React application. The application is built using TypeScript, React, Redux Toolkit, JSX and Less CSS.
+
+Starting the application will render a list of gift card offers available to a given user.
+
+**Please complete the following tasks:**
 
 When clicking on a gift card offer in the grid, please set a blue border around the offer card so the user knows which one is selected.
 
