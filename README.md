@@ -17,7 +17,7 @@ Starting the application will render a list of gift card offers available to a g
 
 - Style the list of available cost options for the gift card according to the attached design:
 
-![Prizeout calculation](https://assets.prizeout.com/temp/code-challenge/calculation.png)
+![Prizeout calculation](https://assets.prizeout.com/temp/code-challenge/calculation-section.png)
 
 
 
