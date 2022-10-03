@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { uuid } from 'uuidv4';
+import { v4 as uuid_v4 } from 'uuid';
 
 import './collapsible-panel.less';
 
@@ -15,7 +15,7 @@ export const CollapsiblePanel: React.FC<CollapsiblePanelProps> = ({ content, id,
     const [isOpen, setIsOpen] = useState(false),
         togglePanel = (): void => setIsOpen(!isOpen),
         classes: string = Classnames('collapsible-panel', { open: isOpen }),
-        elmId = id || `cpc-${uuid()}`;
+        elmId = id || `cpc-${uuid_v4()}`;
 
     return (
         <div className={classes}>

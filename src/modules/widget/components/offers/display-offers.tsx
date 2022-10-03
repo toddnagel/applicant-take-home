@@ -1,5 +1,5 @@
 import React from 'react';
-import { uuid } from 'uuidv4';
+import { v4 as uuid_v4 } from 'uuid';
 import { useAppSelector } from '../../../../hooks';
 import { PrizeoutOfferViews, selectOffers } from '../../../../slices/offers-slice';
 import VerticalOffers from './vertical-offers/vertical-offers';
@@ -16,7 +16,7 @@ const DisplayOffers: React.FC = (): React.ReactElement => {
         }
     };
 
-    return <div>{offers && offers.map((offer) => <div key={uuid()}>{offerFactory(offer)}</div>)}</div>;
+    return <div>{offers && offers.map((offer) => <div key={uuid_v4()}>{offerFactory(offer)}</div>)}</div>;
 };
 
 export default DisplayOffers;
