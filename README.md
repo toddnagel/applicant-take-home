@@ -7,15 +7,15 @@ Starting the application will render a list of gift card offers available to a g
 
 **Please complete the following tasks:**
 
-When clicking on a gift card offer in the grid, please set a blue border around the offer card so the user knows which one is selected.
+- When clicking on a gift card offer in the grid, please set a blue border around the offer card so the user knows which one is selected.
 
-When clicking on an offer, please populate the right sidebar with the selected offers information. It should display the gift card, gift card name, a list of available cost options for the gift card and the Prizeout button. 
+- When clicking on an offer, please populate the right sidebar with the selected offers information. It should display the gift card, gift card name, a list of available cost options for the gift card and the Prizeout button. 
 
-A user should be able to select a value for the gift card they would like to purchase.
+- A user should be able to select a value for the gift card they would like to purchase.
 
-Clicking the Prizeout button should trigger an api call to the server. You can mock a successful response from the server. The request should include all viable information inregards to the offer that has been selected and the gift card value that was chosen. The following values are required by the checkout endpoint: `checkout_value_id`, `cost_in_cents`, `name`, `value_in_cents`. 
+- Clicking the Prizeout button should trigger an api call to the server. You can mock a successful response from the server. The request should include all viable information inregards to the offer that has been selected and the gift card value that was chosen. The following values are required by the checkout endpoint: `checkout_value_id`, `cost_in_cents`, `name`, `value_in_cents`. 
 
-Style the list of available cost options for the gift card according to the attached design:
+- Style the list of available cost options for the gift card according to the attached design:
 
 ![Prizeout calculation](https://assets.prizeout.com/temp/code-challenge/calculation.png)
 
