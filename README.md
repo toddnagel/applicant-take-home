@@ -15,9 +15,7 @@ A user should be able to select a value for the gift card they would like to pur
 
 Clicking the Prizeout button should trigger an api call to the server. You can mock a successful response from the server. The request should include all viable information inregards to the offer that has been selected and the gift card value that was chosen. The following values are required by the checkout endpoint: `checkout_value_id`, `cost_in_cents`, `name`, `value_in_cents`. 
 
-**Frontend focused candidates should also do the following styling task:**
-
-Style the list of available cost options for the gift card according to the attached design
+Style the list of available cost options for the gift card according to the attached design:
 
 ![Prizeout calculation](https://assets.prizeout.com/temp/code-challenge/calculation.png)
 
