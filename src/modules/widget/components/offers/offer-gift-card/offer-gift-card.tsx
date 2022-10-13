@@ -17,7 +17,7 @@ export const OfferGiftCard: React.FC<OfferGiftCardProps> = ({ offer, onClickHand
     const offerType = firstGiftCard.display_monetary_bonus ? 'monetary' : 'percentage';
     const offerValue = firstGiftCard.display_bonus;
     const classes: string = Classnames('offer-gift-card', {
-        'selected-offer-gift-card': activeOfferId === firstGiftCard.checkout_value_id,
+        'offer-gift-card--selected': activeOfferId === firstGiftCard.checkout_value_id,
     });
 
     const selectOfferOnEnter = (event: React.KeyboardEvent<HTMLElement>) => {
