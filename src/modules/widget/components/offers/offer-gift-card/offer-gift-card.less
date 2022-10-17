@@ -1,0 +1,14 @@
+.offer-gift-card {
+  &:focus-visible {
+    outline: none;
+  }
+  .gift-card-image__wrapper {
+    cursor: pointer;
+  }
+  &:focus-visible, &.offer-gift-card--selected {    
+    .gift-card-image__wrapper {
+      outline: 2px solid var(--color-primary);
+      box-shadow: 0px 1px 10px var(--color-primary);
+    }
+  }
+}

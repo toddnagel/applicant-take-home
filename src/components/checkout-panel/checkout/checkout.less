@@ -1,10 +1,72 @@
 @import "../../../utils/styles/utility.less";
+@import '../../../utils/styles/mixins.less';
 
 .checkout {
 	padding: var(--space-inner);
-	
+	.grid--stretch-top > .grid__item {
+    overflow-y: visible;
+	}
+	.checkout-response {
+		margin: .5rem 0;
+	}
+	span {
+		font-size: var(--font-size-m);
+		font-weight: bold;
+		&.bonus-value {
+			color: var(--color-primary);
+		}
+	}
+	.flex-row {
+		.flexbox(@flexFlow: row; @justifyContent: space-between; @alignItems: stretch);
+	}
 	&__brand {
-		overflow: auto;
+		overflow: visible;		
+		.checkout-offers {
+			&__offer-options {
+				margin: var(--space-xs) 0;
+				display: grid;
+				gap: .5rem;
+				grid-template-columns: repeat(4, 1fr);
+
+				input.offer-value {
+					&:not(.processing){
+						cursor: pointer;
+					}
+					background-color: var(--color-grey-200);
+					border: 1px solid transparent;
+					border-radius: var(--border-radius-tertiary);
+					padding: .5rem;
+					color: var(--color-black);
+					span {							
+						font-size: var(--font-size-xs);							
+					}
+					&:focus, &:focus-visible {
+						background-color: var(--color-primary);
+						box-shadow: 0 0 8px var(--color-blue-300);
+						border-color: transparent;
+						outline: none;
+					}
+					&.selected, &:hover:not(.processing), &:active, &:focus, &:focus-visible {
+						color: var(--color-white);
+					}
+					&.selected {
+						background-color: var(--color-primary);
+					}
+					&:hover:not(.processing) {
+						background-color: var(--color-blue-400);
+					}
+					&:active {
+						background-color: var(--color-blue-500);
+					}
+				}				
+			}
+			&__offer-totals {
+				border: 1px solid var(--color-grey-200);
+				border-radius: var(--border-radius-tertiary);
+				padding: var(--space-xs) var(--space-s);
+				margin: var(--space-s) 0;
+			}
+		}
 	}
 }
 
